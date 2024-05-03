@@ -20,7 +20,7 @@ jobs:
           cache: "pip"
 
       # Install the dependencies
-      - run: "poetry export -f requirements.txt --output requirements.txt && pip install -r requirements.txt"
+      - run: "pip install ."
 
       # Run all the tests
       - run: "python -m dl4to4ocp.resize"
