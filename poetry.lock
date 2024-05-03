@@ -1593,82 +1593,14 @@ files = [
 diagrams = ["jinja2", "railroad-diagrams"]
 
 [[package]]
-name = "pysdfgen"
-version = "0.1.12"
-description = "SDFGen for Python"
+name = "pysdf"
+version = "0.1.9"
+description = "SDF: Convert triangle mesh to continuous signed distance function + some other mesh utilities"
 optional = false
 python-versions = "*"
 files = [
-    {file = "pysdfgen-0.1.12-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:5baff58da83edb915fabe316e708951df68ba6bd99a89b5b2f814adba14d79ab"},
-    {file = "pysdfgen-0.1.12-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0fe64089926da64ebf0552a3bbe082dfce9a07c9218b32d6e4cf2b4d9d049d39"},
-    {file = "pysdfgen-0.1.12-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c987ffd146d267a59f2f44d328ad19779720fbda09d6a93f69dfa2750cbd302e"},
-    {file = "pysdfgen-0.1.12-cp310-cp310-musllinux_1_1_aarch64.whl", hash = "sha256:fc31a945377edd609067adbafc14f759768490b28784d977a87da4adfe875821"},
-    {file = "pysdfgen-0.1.12-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:7ddc5ba252ad3eaaa7fd4cc34f11b771c7209847e975974d859e80334a3ca73c"},
-    {file = "pysdfgen-0.1.12-cp310-cp310-win32.whl", hash = "sha256:44daf975ee101574e0e902b938658324dbafb51b7bf87e3f1f5a1b6099647383"},
-    {file = "pysdfgen-0.1.12-cp310-cp310-win_amd64.whl", hash = "sha256:b7a311e8c2f80ed7b3951f294cbc6d2663de77452f03819596c486e90650aeb3"},
-    {file = "pysdfgen-0.1.12-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:28888e403329e2702771aec8fb8a975b6d18b41f885c835fd15f3b3d947c5937"},
-    {file = "pysdfgen-0.1.12-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a45832dc08e843494de56d1244e407c407330dba6cb7013a3702f90eca6c4798"},
-    {file = "pysdfgen-0.1.12-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:db460943aaa29b498e313cda59f1a19fd2b0349b9ee059c49889579ee481282d"},
-    {file = "pysdfgen-0.1.12-cp311-cp311-musllinux_1_1_aarch64.whl", hash = "sha256:2306484452c62b3d064c4aadbd8d04a083ae86c06a1e48c7944ebb6644543e46"},
-    {file = "pysdfgen-0.1.12-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:bfd60f38b9120ff3e6d4109d96ce025476181a5c72cc5d417812c2f0bd68b564"},
-    {file = "pysdfgen-0.1.12-cp311-cp311-win32.whl", hash = "sha256:d1b220bf7cd58227151a1d1af6b07a4aab1d1ed5c7121e3d76dbaaad2edac982"},
-    {file = "pysdfgen-0.1.12-cp311-cp311-win_amd64.whl", hash = "sha256:074695f338cb777ab5a5da73c692d565ef79fac14afa42401871e5b1e090ac1b"},
-    {file = "pysdfgen-0.1.12-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:d910d531bfca9e03864b030608afd35587563512765cafc66424c99dfdc10f7c"},
-    {file = "pysdfgen-0.1.12-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f60a9ed1e91fff8eee2eb7f0905b5d93cc7cb493e0bf8a5bd153051f6277b47c"},
-    {file = "pysdfgen-0.1.12-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ee64716531bd3345afd7e0ff77c353c6ce3408c790706152204e2ec194269f27"},
-    {file = "pysdfgen-0.1.12-cp312-cp312-musllinux_1_1_aarch64.whl", hash = "sha256:3960e9b2a56a34fe07810f48175efd5581eceb6f153962e68dcfd7d4ffe99a6c"},
-    {file = "pysdfgen-0.1.12-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:41fae6687ee0ff28a0515e13217cf5c9c92ec8dc2c50671ae5a6925ae5864373"},
-    {file = "pysdfgen-0.1.12-cp312-cp312-win32.whl", hash = "sha256:1082f8135993fb34e9d4a638354444d581b22dea0b33da438da5231da9aa9bc7"},
-    {file = "pysdfgen-0.1.12-cp312-cp312-win_amd64.whl", hash = "sha256:5ec03de972b4035cecd7d64c3d2dac48aa976f46fe846697dec0c798c7c8e1a6"},
-    {file = "pysdfgen-0.1.12-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:3304f7008a3adfb68a49f6ac0b18f69548daa5f8d5a8b578d1297358b410c072"},
-    {file = "pysdfgen-0.1.12-cp36-cp36m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:9f0a13e6e8c85cfb3552973970dc67ef2ac4ae538e2aa09421d8fc528969e7a2"},
-    {file = "pysdfgen-0.1.12-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:55e3447dea6ca6769f102088aa2ca0b65a4f7d48954c1fd64e66eb87222a2c33"},
-    {file = "pysdfgen-0.1.12-cp36-cp36m-musllinux_1_1_aarch64.whl", hash = "sha256:55e6cfa05def273117371a3ccdd9db5009e32b52288f27673bd44e7fea3e54ac"},
-    {file = "pysdfgen-0.1.12-cp36-cp36m-musllinux_1_1_x86_64.whl", hash = "sha256:9cc378b663e7d4a17426931f5578b601b20ae59e83aa79633c3dfbc5e6eb9174"},
-    {file = "pysdfgen-0.1.12-cp36-cp36m-win32.whl", hash = "sha256:90a2e26005a938d703d13d1ffeb78866b25268279395d866502eb86025b7b3a0"},
-    {file = "pysdfgen-0.1.12-cp36-cp36m-win_amd64.whl", hash = "sha256:66487cf3849ad0ed39c16bd62ee4f9615fe62f4431b3fdd2bd11de3682ff05d2"},
-    {file = "pysdfgen-0.1.12-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:3143d18754db2b86ff134cb04d35a984df63bd5ca3199acb5b5c92b6241d681b"},
-    {file = "pysdfgen-0.1.12-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e31d2a569c09f26609cbef2dbabc27a1508eeddba8725c0888afc9373b77e173"},
-    {file = "pysdfgen-0.1.12-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8e62dfde3ee996e7040176a27a3345d34b0f2873dd836d46439594329c87e767"},
-    {file = "pysdfgen-0.1.12-cp37-cp37m-musllinux_1_1_aarch64.whl", hash = "sha256:ae2dc5233b5566183c6d0b043b5d8df4ca0471392b999a859f714b40cffb6c6d"},
-    {file = "pysdfgen-0.1.12-cp37-cp37m-musllinux_1_1_x86_64.whl", hash = "sha256:c23280750bf7fd0c54e18c70fd1c1e0ae8ff8c74f3debed4fc4533cf51a6b6c6"},
-    {file = "pysdfgen-0.1.12-cp37-cp37m-win32.whl", hash = "sha256:9430bab2f4f8954635bad1ca00de8be070f080c948a56c0629cc8a5eaeb970e8"},
-    {file = "pysdfgen-0.1.12-cp37-cp37m-win_amd64.whl", hash = "sha256:bb36bf8abba6bf0eaba6a0956f92ef8536e820b97077feebf74ea9d71cb4270f"},
-    {file = "pysdfgen-0.1.12-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:b716f1b0f64fe56014b54d3900475939f32e873085f8ba3a064a1758d167ae59"},
-    {file = "pysdfgen-0.1.12-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:9680bd4404e8f00f3feca83c55a3757e34214f9c3363e7876f1560e2e77d4e11"},
-    {file = "pysdfgen-0.1.12-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f1b17565f8305ec2fdba11e77088ec3105781db50ee477baca8a649287a42a73"},
-    {file = "pysdfgen-0.1.12-cp38-cp38-musllinux_1_1_aarch64.whl", hash = "sha256:09583781648cd895f2eb788e4b6bb0f99892502d23257e0a4f9e606e1b0fd86b"},
-    {file = "pysdfgen-0.1.12-cp38-cp38-musllinux_1_1_x86_64.whl", hash = "sha256:b181d168ce5b5f12e7d3da8104233bb2a780d7d1fb594b633e525bc009af1757"},
-    {file = "pysdfgen-0.1.12-cp38-cp38-win32.whl", hash = "sha256:f5af9d8a9610e3ca65890fbeabecfb064c233e18aa05bc8764f2ed0a42366c75"},
-    {file = "pysdfgen-0.1.12-cp38-cp38-win_amd64.whl", hash = "sha256:f5a37c5de253f3ff5c8449fe8e83963a88ec4926a6e72c698e0055dfecabc35b"},
-    {file = "pysdfgen-0.1.12-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:5a11da8a09349f039a85fae05839a4d661d0a827cc96b5182d822f18e07ab1dd"},
-    {file = "pysdfgen-0.1.12-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:52f4a1d7e5f5ffe0ab876a242e5f27e92507780044cc36966748a863372b7944"},
-    {file = "pysdfgen-0.1.12-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9d4aebdf44b067e94cc2cd7e300ebb26cd5ddf7f6949b3b7809150b2ed3c35a8"},
-    {file = "pysdfgen-0.1.12-cp39-cp39-musllinux_1_1_aarch64.whl", hash = "sha256:8b2cba10bde68f30dee0496ca5ec40c9e380a05e1eeedbc4f9391300eaaf0cdd"},
-    {file = "pysdfgen-0.1.12-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:e8b40e59d2df9a5708a51ade57133a9f2a3905ecad51609a3d10f6535621ca36"},
-    {file = "pysdfgen-0.1.12-cp39-cp39-win32.whl", hash = "sha256:8ae317489a358677655c893150e8b3bb41ba232f4d809000d6ef1dad579fbd53"},
-    {file = "pysdfgen-0.1.12-cp39-cp39-win_amd64.whl", hash = "sha256:913baa7e187b0a8c7ed1ec517bdd0bfc7976477cb99989b75dbad8b2826a5342"},
-    {file = "pysdfgen-0.1.12-pp310-pypy310_pp73-macosx_10_9_x86_64.whl", hash = "sha256:369693ea4e5bc8687c84bf0a21f6c0cc8c42218bf934234702d73ebc304963cf"},
-    {file = "pysdfgen-0.1.12-pp310-pypy310_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5cfdc8f975ac36a0d8f52dee958c42a4d4284f1c182b29d7937b7d285aebf5d7"},
-    {file = "pysdfgen-0.1.12-pp310-pypy310_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3ef6b9f931c3b2d9e9649dd003d9ade3c013727721ce37d8e1467966c0cbfb3b"},
-    {file = "pysdfgen-0.1.12-pp310-pypy310_pp73-win_amd64.whl", hash = "sha256:c36ba25790861075083cdd928bf377a4ea2210224ad040f7effbc466d659c71f"},
-    {file = "pysdfgen-0.1.12-pp37-pypy37_pp73-macosx_10_9_x86_64.whl", hash = "sha256:634a44029e22451e35d789270a5fb27bf29843fa1db343a39f3d0a0cc5ccfd1d"},
-    {file = "pysdfgen-0.1.12-pp37-pypy37_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b7250c88fe22dbb8894be08160f993bcf2b633d941b323df4094bf9d72bd4795"},
-    {file = "pysdfgen-0.1.12-pp37-pypy37_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d64b5ae68702093561ade19c98332c47855aed6d37537addf85385b621e90893"},
-    {file = "pysdfgen-0.1.12-pp37-pypy37_pp73-win_amd64.whl", hash = "sha256:4e35c4f3331d8f8b3a7116c3bdfa551fd9433aaca5fec36bee46f9849edda60e"},
-    {file = "pysdfgen-0.1.12-pp38-pypy38_pp73-macosx_10_9_x86_64.whl", hash = "sha256:0cae4c1184dbf07c1b7e527ff138c627c6b3626fe6fa445b343f5d120384174f"},
-    {file = "pysdfgen-0.1.12-pp38-pypy38_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:85756fcd04021614b68884ded3868116f7852d77a9d9773585c771f030e4c7bd"},
-    {file = "pysdfgen-0.1.12-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e095ab0b1346038d175f0d8b4d8acf42309035c25332a838967afd61b7c592e1"},
-    {file = "pysdfgen-0.1.12-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:efbfa6db52816da3558192b235368302c67785746ce8c6bbe51b71751477e888"},
-    {file = "pysdfgen-0.1.12-pp39-pypy39_pp73-macosx_10_9_x86_64.whl", hash = "sha256:201e346fdc589634433a06835d6fbb4819540dd9b92a08397c10675e332562db"},
-    {file = "pysdfgen-0.1.12-pp39-pypy39_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:c32e9cddc7cedf261bb07a39163f7d221018a51531bc4c74594d0885aac09f29"},
-    {file = "pysdfgen-0.1.12-pp39-pypy39_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:097e35fb924d7c08b66053b66219f0eac4a6e9572d0bd9ccad85ee15a73703cd"},
-    {file = "pysdfgen-0.1.12-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:e4cc95ba7f77df21e5a8494eeae7dccc06a94ed023b21591546191c0195c5219"},
-    {file = "pysdfgen-0.1.12.tar.gz", hash = "sha256:badf9a19a608729dc530debbd56b54b54937058ed5a82b025ac25390fc07588b"},
+    {file = "pysdf-0.1.9.tar.gz", hash = "sha256:d0639838ec3adcee3499d37290cda217fc1f0834e30a4167da04ae062087fa7b"},
 ]
-
-[package.dependencies]
-trimesh = ">=3.5.20"
 
 [[package]]
 name = "python-dateutil"
@@ -2121,26 +2053,6 @@ files = [
 ]
 
 [[package]]
-name = "trimesh"
-version = "4.3.2"
-description = "Import, export, process, analyze and view triangular meshes."
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "trimesh-4.3.2-py3-none-any.whl", hash = "sha256:7563182a9379485b88a44e87156fe54b41fb6f8f030001b9b6de39abdef05c22"},
-    {file = "trimesh-4.3.2.tar.gz", hash = "sha256:1450dbd1aae8dd825eddd56c5a7d7d1b35cad7efc2c63d535e19569577c25916"},
-]
-
-[package.dependencies]
-numpy = ">=1.20"
-
-[package.extras]
-all = ["trimesh[easy,recommend,test]"]
-easy = ["chardet", "colorlog", "embreex", "httpx", "jsonschema", "lxml", "mapbox-earcut", "networkx", "pillow", "pycollada", "rtree", "scipy", "setuptools", "shapely", "svg.path", "vhacdx", "xatlas", "xxhash"]
-recommend = ["cascadio", "glooey", "manifold3d (>=2.3.0)", "meshio", "openctm", "psutil", "pyglet (<2)", "python-fcl", "scikit-image", "sympy"]
-test = ["coveralls", "ezdxf", "gmsh (>=4.12.1)", "matplotlib", "pyinstrument", "pymeshlab", "pyright", "pytest", "pytest-beartype", "pytest-cov", "ruff"]
-
-[[package]]
 name = "triton"
 version = "2.3.0"
 description = "A language and compiler for custom Deep Learning operations"
@@ -2257,4 +2169,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "0886e769c3419e73e282fbc8cd154de86a7965f3fe84c55867d905909eeb1c72"
+content-hash = "e21ad5ffd853b0b0d57facb3b333b1057fa898f1c7f88106a715af33cd9eb7bd"

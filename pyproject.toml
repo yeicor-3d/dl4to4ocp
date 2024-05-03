@@ -15,7 +15,7 @@ pyglet = "^1.5.28"  # dl4to dep: fixed version as latest is incompatible
 
 sdftoolbox = {git = "https://github.com/cheind/sdftoolbox"} # For dual contouring iso-surface extraction
 
-pysdfgen = "^0.1.12" # For generating SDFs from meshes
+pysdf = "^0.1.9" # For generating SDFs from meshes
 
 build123d = "^0.5.0" # Nice way to interact with OCP
 
