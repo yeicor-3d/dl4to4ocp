@@ -1,4 +1,4 @@
-# DL4OP4OCP - Deep Learning for Topology Optimization for OpenCascade Python
+# dl4to4ocp - Deep Learning for Topology Optimization for OpenCascade Python
 
 This is a tool that helps perform [topology optimization](https://en.wikipedia.org/wiki/Topology_optimization) on
 your [OCP](https://github.com/CadQuery/OCP)-based CAD
