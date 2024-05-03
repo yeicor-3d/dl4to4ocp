@@ -1,0 +1,28 @@
+on:
+  push:
+    branches:
+      - "master"
+  pull_request:
+    branches:
+      - "master"
+
+jobs:
+
+  test:
+    runs-on: "ubuntu-latest"
+    steps:
+      # Basic setup
+      - uses: "actions/checkout@v4"
+      - run: "pipx install poetry"
+      - uses: "actions/setup-python@v5"
+        with:
+          python-version: "3.11"
+          cache: "poetry"
+
+      # Install the dependencies
+      - run: "poetry install"
+
+      # Run all the tests
+      - run: "poetry run python -m dl4to4ocp.resize"
+      - run: "poetry run python -m dl4to4ocp.voxels"
+      - run: "poetry run python -m example.example"
