@@ -2538,13 +2538,13 @@ files = [
 
 [[package]]
 name = "pyglet"
-version = "1.5.28"
-description = "Cross-platform windowing and multimedia library"
+version = "2.0.15"
+description = "pyglet is a cross-platform games and multimedia package."
 optional = false
-python-versions = "*"
+python-versions = ">=3.8"
 files = [
-    {file = "pyglet-1.5.28-py3-none-any.whl", hash = "sha256:ea312a553c266a0f45a9c209f565e3c02371c83d89fd8931422c6475ce4ecbae"},
-    {file = "pyglet-1.5.28.zip", hash = "sha256:68bff532226b0e8f54dfcc2f6df7d0e463b451fae97fe9fa4af4131d34afbc00"},
+    {file = "pyglet-2.0.15-py3-none-any.whl", hash = "sha256:9e4cc16efc308106fd3a9ff8f04e7a6f4f6a807c6ac8a331375efbbac8be85af"},
+    {file = "pyglet-2.0.15.tar.gz", hash = "sha256:42085567cece0c7f1c14e36eef799938cbf528cfbb0150c484b984f3ff1aa771"},
 ]
 
 [[package]]
@@ -3727,4 +3727,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "81757d0cfe29c8315d7a05f487bf900847cc3244b3ee23415a10073358b69a0c"
+content-hash = "19e0cde78f364378448fe241c471dfde0362e85708ab49a323f7ab3f4695e2e8"
