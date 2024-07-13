@@ -2653,29 +2653,29 @@ files = [
 
 [[package]]
 name = "pyvista"
-version = "0.38.6"
+version = "0.44.0"
 description = "Easier Pythonic interface to VTK"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "pyvista-0.38.6-py3-none-any.whl", hash = "sha256:661c0c550fa63a748a2361bc4bbff52ba5e8f22a32991be64ec8ec6b14754a1d"},
-    {file = "pyvista-0.38.6.tar.gz", hash = "sha256:022ef79f7051c84aa210d82b4ca6574d8b7186e719c61e6f407fd4c84ca56a48"},
+    {file = "pyvista-0.44.0-py3-none-any.whl", hash = "sha256:da920a06df03c2328e8be4390e4333e590f65ad25af3b06cae257ec78a6d27ae"},
+    {file = "pyvista-0.44.0.tar.gz", hash = "sha256:3ae2a0bedb7e0650c3927c8ecf3f249c7d4e3b9cf5cba9f3aadab6783966d4d7"},
 ]
 
 [package.dependencies]
-imageio = "*"
-numpy = "*"
+matplotlib = ">=3.0.1"
+numpy = ">=1.21.0"
 pillow = "*"
 pooch = "*"
 scooby = ">=0.5.1"
+typing-extensions = "*"
 vtk = "*"
 
 [package.extras]
-all = ["cmocean", "colorcet", "ipyvtklink", "matplotlib", "meshio (>=5.2)", "panel", "pythreejs"]
-colormaps = ["cmocean", "colorcet", "matplotlib"]
-io = ["meshio (>=5.2)"]
-jupyter = ["ipyvtklink", "ipywidgets", "jupyter-server-proxy", "nest-asyncio", "panel", "pythreejs", "trame (>=2.2.6)", "trame-client (>=2.4.2)", "trame-server (>=2.8.0)", "trame-vtk (>=2.0.17)"]
-trame = ["trame (>=2.2.6)", "trame-client (>=2.4.2)", "trame-server (>=2.8.0)", "trame-vtk (>=2.0.17)"]
+all = ["pyvista[colormaps,io,jupyter]"]
+colormaps = ["cmocean", "colorcet"]
+io = ["imageio", "meshio (>=5.2)"]
+jupyter = ["ipywidgets", "jupyter-server-proxy", "nest-asyncio", "trame (>=2.5.2)", "trame-client (>=2.12.7)", "trame-server (>=2.11.7)", "trame-vtk (>=2.5.8)", "trame-vuetify (>=2.3.1)"]
 
 [[package]]
 name = "pywin32"
@@ -3758,4 +3758,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "81757d0cfe29c8315d7a05f487bf900847cc3244b3ee23415a10073358b69a0c"
+content-hash = "9841dade7c34f3f42454230dc22db5e88aa5aef3a43f7d016c6473fdd85f4ce4"
