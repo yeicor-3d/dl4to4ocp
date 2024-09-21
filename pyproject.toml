@@ -19,7 +19,7 @@ sdftoolbox = {git = "https://github.com/cheind/sdftoolbox"} # For dual contourin
 
 pysdf = "^0.1.9" # For generating SDFs from meshes
 
-build123d = "^0.6.0" # Nice way to interact with OCP
+build123d = "^0.7.0" # Nice way to interact with OCP
 
 [build-system]
 requires = ["poetry-core"]
