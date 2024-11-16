@@ -10,7 +10,7 @@ python = "^3.11"
 
 dl4to = {git = "https://github.com/dl4to/dl4to"} # The library that we are wrapping
 pyvista = "^0.44.0" # dl4to dep: fixed version as latest is incompatible
-kaleido = "0.2.1" # dl4to dep: fixed version as latest is broken
+kaleido = "0.4.1" # dl4to dep: fixed version as latest is broken
 pyglet = "^1.5.28" # dl4to dep: fixed version as latest is incompatible
 jupyter = "^1.0.0" # dl4to dep: tqdm dep in notebook mode
 ipywidgets = "^8.1.2" # dl4to dep: tqdm dep in notebook mode
