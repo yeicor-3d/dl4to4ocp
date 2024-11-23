@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from typing import Literal, Annotated, TypeVar, Generic, Tuple
 
 import numpy as np
+np.float_ = np.float64
 import numpy.typing as npt
 import pysdf
 import sdftoolbox
