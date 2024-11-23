@@ -6,7 +6,7 @@ authors = ["Yeicor <4929005+Yeicor@users.noreply.github.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.11,<3.13"
 
 dl4to = {git = "https://github.com/dl4to/dl4to"} # The library that we are wrapping
 pyvista = "^0.44.0" # dl4to dep: fixed version as latest is incompatible
