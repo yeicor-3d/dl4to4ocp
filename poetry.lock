@@ -232,54 +232,62 @@ css = ["tinycss2 (>=1.1.0,<1.5)"]
 
 [[package]]
 name = "build123d"
-version = "0.8.0"
+version = "0.9.0"
 description = "A python CAD programming library"
 optional = false
-python-versions = "<3.13,>=3.9"
+python-versions = "<3.14,>=3.10"
 files = [
-    {file = "build123d-0.8.0-py3-none-any.whl", hash = "sha256:676be048c70b2a7b6c3a7c4022ede0f51369b88aba13e4c964b60ddf8c00f503"},
-    {file = "build123d-0.8.0.tar.gz", hash = "sha256:7c36e6ed8ca717187336e26358e98023c2af37a9a55fb3256bd58252549edfbe"},
+    {file = "build123d-0.9.0-py3-none-any.whl", hash = "sha256:0213daaf4bd58e170c3c5d7654391bac9992854ddca71c7e1ed99f8cc7d62797"},
+    {file = "build123d-0.9.0.tar.gz", hash = "sha256:57c2e91bad7e362ef12bef8669f42713f6f7997389122d4c9d68fd79f73426ff"},
 ]
 
 [package.dependencies]
 anytree = ">=2.8.0,<3"
-cadquery-ocp = ">=7.7.0"
+cadquery-ocp = ">=7.8,<7.9"
 ezdxf = ">=1.1.0,<2"
 ipython = ">=8.0.0,<9"
 numpy = ">=2,<3"
-ocpsvg = "*"
+ocpsvg = ">=0.4"
 py-lib3mf = ">=2.3.1"
 svgpathtools = ">=1.5.1,<2"
 trianglesolver = "*"
-typing-extensions = ">=4.6.0,<5"
+typing_extensions = ">=4.6.0,<5"
+
+[package.extras]
+all = ["build123d[benchmark]", "build123d[development]", "build123d[docs]", "build123d[ocp-vscode]"]
+benchmark = ["pytest-benchmark"]
+development = ["black", "mypy", "pylint", "pytest", "pytest-cov", "wheel"]
+docs = ["sphinx (==8.1.3)", "sphinx-copybutton", "sphinx-design", "sphinx-hoverxref", "sphinx-rtd-theme", "sphinx_autodoc_typehints"]
+ocp-vscode = ["ocp_vscode"]
+stubs = ["cadquery-ocp-stubs (>=7.8,<7.9)"]
 
 [[package]]
 name = "cadquery-ocp"
-version = "7.7.2"
-description = "OCP+VTK wheel with shared library dependencies bundled."
+version = "7.8.1.1.post1"
+description = "Python wrapper for Open CASCADE Technology 3D geometry library based on the official CadQuery/OCP sources"
 optional = false
-python-versions = "*"
+python-versions = "<3.14,>=3.10"
 files = [
-    {file = "cadquery_ocp-7.7.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:7f2faf716855f9a8372493e001e6e318da75b046472e7ee69881d2a4e6b65a04"},
-    {file = "cadquery_ocp-7.7.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:10c9883a318212968525f3fece504106b81ca9ba4e187b00b8817b1f944e302a"},
-    {file = "cadquery_ocp-7.7.2-cp310-cp310-manylinux_2_35_x86_64.whl", hash = "sha256:35e2c8ca923e4ba77b833357eb14c7e8a939f17285ef6acde7c26961989a8dfe"},
-    {file = "cadquery_ocp-7.7.2-cp310-cp310-win_amd64.whl", hash = "sha256:4fc230711d52a9e7d71ab4c79c957287c7f2f85e5f09e036b573e6851df4d1ba"},
-    {file = "cadquery_ocp-7.7.2-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:488401fa4d070e3eb17729fb8b6494bd3577f0913c4e901e674c4d8fcd9ac1fe"},
-    {file = "cadquery_ocp-7.7.2-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:6a4d2bd759cc2800ac91664357e55aba889c996c7492bd595ed63b0c517869d3"},
-    {file = "cadquery_ocp-7.7.2-cp311-cp311-manylinux_2_35_x86_64.whl", hash = "sha256:2be9408551c03e1c715e3b158b41ce458178ecf530ba644e3e884a5989feb611"},
-    {file = "cadquery_ocp-7.7.2-cp311-cp311-win_amd64.whl", hash = "sha256:8e1f90250924ac50344bf0867e3d9a927f077583351b270b4e0e171033dd2046"},
-    {file = "cadquery_ocp-7.7.2-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:78a7903267cd9986181b634a315ca66fac1bb9e6dbfaf60724d812b3a2cc77bf"},
-    {file = "cadquery_ocp-7.7.2-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:51ffbcd6d356d4f0c2e5f9e1581226121cd730fe4521eabac05e9d71e6a43f6f"},
-    {file = "cadquery_ocp-7.7.2-cp312-cp312-manylinux_2_35_x86_64.whl", hash = "sha256:7ac2d83b4f4b3d7c35421a1d9f8fec2adc73b6ed6cac50c1ffcede5552e38e9b"},
-    {file = "cadquery_ocp-7.7.2-cp312-cp312-win_amd64.whl", hash = "sha256:d9e5c8ef5aeb1d3fb8f0b207ed1a2b781d22dc3e9b9c0551f52342f5a6ee7fc5"},
-    {file = "cadquery_ocp-7.7.2-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:7134e629559ba110a4d0cda53cb6a30c0af52524f7a6151e772d4b720ef508be"},
-    {file = "cadquery_ocp-7.7.2-cp38-cp38-manylinux_2_35_x86_64.whl", hash = "sha256:73183f141514e507c45a1e4ba1d25f1fdc604b20dd42bed7c8168f468632686b"},
-    {file = "cadquery_ocp-7.7.2-cp38-cp38-win_amd64.whl", hash = "sha256:9e40840e1f4da5e0a8f1eb2168efc33ae65ac8e046c27a49936a2e9931fc1711"},
-    {file = "cadquery_ocp-7.7.2-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:3f6750c84f8af930f366ad22397141f3c332c39fb826edf3fe26c4e6938690f7"},
-    {file = "cadquery_ocp-7.7.2-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:d8f8225550db1f5da16e00197ec3a47606866227cfaedac9be2fe6a643db069c"},
-    {file = "cadquery_ocp-7.7.2-cp39-cp39-manylinux_2_35_x86_64.whl", hash = "sha256:9f6c601d1db66353f0ef7c63fde70411573e917c16fb4c7cb5d92ed85b72f154"},
-    {file = "cadquery_ocp-7.7.2-cp39-cp39-win_amd64.whl", hash = "sha256:feea223eaa2dfa33684f568b5ba2b02c35e96b5d894014f98927b5c08041a6be"},
+    {file = "cadquery_ocp-7.8.1.1.post1-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:4413961e98a90686a56c2ac58b126773c7da4eb82b967ddcc1f394fe6a7b71ad"},
+    {file = "cadquery_ocp-7.8.1.1.post1-cp310-cp310-macosx_11_0_x86_64.whl", hash = "sha256:687c8a22d6248b28e44f136cecf93d274a897efbd0d8b36e38d4e207fecf1d84"},
+    {file = "cadquery_ocp-7.8.1.1.post1-cp310-cp310-manylinux_2_31_x86_64.whl", hash = "sha256:b843adfff9014011c32ec68028055e558023a1d567a3b27bcd19d2e97f35ac73"},
+    {file = "cadquery_ocp-7.8.1.1.post1-cp310-cp310-win_amd64.whl", hash = "sha256:d1c3d5b228ca2c2b61a27fee8a279e3c889400a6f56abd7d36034cb9754cfff4"},
+    {file = "cadquery_ocp-7.8.1.1.post1-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:b80b28a2b24bfe52ddcc7962429455a0f8457e33747a0e4e3d184134e286ea7b"},
+    {file = "cadquery_ocp-7.8.1.1.post1-cp311-cp311-macosx_11_0_x86_64.whl", hash = "sha256:313b12f268ef46087bf5d178aed2f97b1cbaccfd9667ecdb779331a6baa8c188"},
+    {file = "cadquery_ocp-7.8.1.1.post1-cp311-cp311-manylinux_2_31_x86_64.whl", hash = "sha256:0ff754db099da9a4285268cecf7740fef782567621480b007697c00e47f8fbde"},
+    {file = "cadquery_ocp-7.8.1.1.post1-cp311-cp311-win_amd64.whl", hash = "sha256:bfb110012766fa23e72c23eace00a791d9e7f86fc630694ef72d5e6b333df3aa"},
+    {file = "cadquery_ocp-7.8.1.1.post1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:0022e854a3840efd5c7fc14fe933772613794777d5eb056a4754d44a86baf02a"},
+    {file = "cadquery_ocp-7.8.1.1.post1-cp312-cp312-macosx_11_0_x86_64.whl", hash = "sha256:53dc24aed402b2ae52634a29b3b17e9c01e857b8ac34bb101d4e8fa76d3cd7f7"},
+    {file = "cadquery_ocp-7.8.1.1.post1-cp312-cp312-manylinux_2_31_x86_64.whl", hash = "sha256:4882074e86722208153579baaee246be4fb10bda22dc20d101c4151f364207b9"},
+    {file = "cadquery_ocp-7.8.1.1.post1-cp312-cp312-win_amd64.whl", hash = "sha256:06982855db94fa0056b922276f0ca94154e5d1eb16f6cba854d704885844924a"},
+    {file = "cadquery_ocp-7.8.1.1.post1-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:08fdc32b79e6f974cf692584be865985161e4fd8cbf854ed64c8c1530458fce3"},
+    {file = "cadquery_ocp-7.8.1.1.post1-cp313-cp313-macosx_11_0_x86_64.whl", hash = "sha256:fd5ffec5e27846fe4796db9cdc0748324e4d7c59da7c6c7d86a6eb38e823b3f5"},
+    {file = "cadquery_ocp-7.8.1.1.post1-cp313-cp313-manylinux_2_31_x86_64.whl", hash = "sha256:081017e5387debe4bf31a9dc222c2513e26d1860ca990119bfe90a6970a77104"},
+    {file = "cadquery_ocp-7.8.1.1.post1-cp313-cp313-win_amd64.whl", hash = "sha256:22877143d06cb52bd7d48a591510f8e72c2fc5768bafebb99e5cf077798ee939"},
 ]
+
+[package.dependencies]
+vtk = "9.3.1"
 
 [[package]]
 name = "certifi"
@@ -2254,17 +2262,17 @@ files = [
 
 [[package]]
 name = "ocpsvg"
-version = "0.3.3"
+version = "0.4.0"
 description = ""
 optional = false
-python-versions = ">=3.9"
+python-versions = ">=3.10"
 files = [
-    {file = "ocpsvg-0.3.3-py3-none-any.whl", hash = "sha256:93a7d4b0edab119ca950e7e15132fdb69399f53851322a3fb56e03946939384a"},
-    {file = "ocpsvg-0.3.3.tar.gz", hash = "sha256:8c441e72110be0b53dd84a00229752d8ce7658ed2c3d66e79c9aade9fcb4b475"},
+    {file = "ocpsvg-0.4.0-py3-none-any.whl", hash = "sha256:718f4d937a2f93c69edce19c9eef9b6e280952c59a882c23366a345fb7ca1c59"},
+    {file = "ocpsvg-0.4.0.tar.gz", hash = "sha256:5155d70593e883b35b1de06ba0fa1cc39c5edea26c25a663243b475ce9987aa6"},
 ]
 
 [package.dependencies]
-cadquery-ocp = ">=7.7.0"
+cadquery-ocp = ">=7.8.1,<7.9.0"
 svgelements = ">=1.9.1,<2"
 
 [package.extras]
@@ -3970,4 +3978,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11,<3.13"
-content-hash = "b1a37c36fcb35a67616110d01e4be4a8f88ae6f4f10d037b91051dda289edb72"
+content-hash = "08dc736fc73080b78119c00b307e5b6e2395431ddeb00bef9cca32cc7f0427a8"
