@@ -2,7 +2,7 @@ import logging
 from typing import List
 
 from OCP.TopoDS import TopoDS_Shape
-from build123d import Shape, Vector, Location, Box, Part, Align
+from build123d import Shape, Vector, Location, Box, Part, Align, Compound
 
 from dl4to4ocp.mlogging import mlogger
 
