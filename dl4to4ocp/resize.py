@@ -12,7 +12,7 @@ def _solid_grow_bounds(solid: TopoDS_Shape, min: Vector, max: Vector, eps: float
     solid = Part(solid)
     solid += Location(min) * Box(eps, eps, eps, align=Align.MIN)
     solid += Location(max) * Box(eps, eps, eps, align=Align.MAX)
-    return solid.wrapped
+    return Compound(solid).wrapped
 
 
 def _ensure_shapes_same_cuboid_bb(*solids: TopoDS_Shape) -> List[TopoDS_Shape]:
