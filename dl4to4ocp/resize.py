@@ -2,7 +2,7 @@ import logging
 from typing import List
 
 from OCP.TopoDS import TopoDS_Shape
-from build123d import Shape, Vector, Location, Box, Part, Align
+from build123d import Shape, Vector, Location, Box, Part, Align, Compound
 
 from dl4to4ocp.mlogging import mlogger
 
@@ -12,7 +12,7 @@ def _solid_grow_bounds(solid: TopoDS_Shape, min: Vector, max: Vector, eps: float
     solid = Part(solid)
     solid += Location(min) * Box(eps, eps, eps, align=Align.MIN)
     solid += Location(max) * Box(eps, eps, eps, align=Align.MAX)
-    return solid.wrapped
+    return Compound(solid).wrapped
 
 
 def _ensure_shapes_same_cuboid_bb(*solids: TopoDS_Shape) -> List[TopoDS_Shape]:
