@@ -234,13 +234,13 @@ css = ["tinycss2 (>=1.1.0,<1.5)"]
 
 [[package]]
 name = "build123d"
-version = "0.9.0"
+version = "0.9.1"
 description = "A python CAD programming library"
 optional = false
 python-versions = "<3.14,>=3.10"
 files = [
-    {file = "build123d-0.9.0-py3-none-any.whl", hash = "sha256:0213daaf4bd58e170c3c5d7654391bac9992854ddca71c7e1ed99f8cc7d62797"},
-    {file = "build123d-0.9.0.tar.gz", hash = "sha256:57c2e91bad7e362ef12bef8669f42713f6f7997389122d4c9d68fd79f73426ff"},
+    {file = "build123d-0.9.1-py3-none-any.whl", hash = "sha256:0e2a3c171d7db55329201438a95ab888df6c1b0fd13067a3780efcc8fbe1cc78"},
+    {file = "build123d-0.9.1.tar.gz", hash = "sha256:8bc179cb65c7e7393191ad7113f13781fabf75892be07060f2bebf95369c093b"},
 ]
 
 [package.dependencies]
