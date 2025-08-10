@@ -3078,14 +3078,14 @@ files = [
 
 [[package]]
 name = "pyvista"
-version = "0.45.3"
+version = "0.46.0"
 description = "Easier Pythonic interface to VTK"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "pyvista-0.45.3-py3-none-any.whl", hash = "sha256:a38109c67e47b46f8c7f31bdf5786e7265bea2785fbf469dd822f2e814c3bf1c"},
-    {file = "pyvista-0.45.3.tar.gz", hash = "sha256:bca39f5ea17e45f40070ab45423dfd2c4fc81c33e0fb565bafded81c024fd04f"},
+    {file = "pyvista-0.46.0-py3-none-any.whl", hash = "sha256:32b7e3ebf4d70e89aead52d46a24abbbd1e48564cf524f2f91efe5fa302b3f0f"},
+    {file = "pyvista-0.46.0.tar.gz", hash = "sha256:521ea90b05e2339b3271983054924b9091350a7d5545fc88980dd2b79895dafc"},
 ]
 
 [package.dependencies]
@@ -3095,11 +3095,11 @@ pillow = "*"
 pooch = "*"
 scooby = ">=0.5.1"
 typing-extensions = "*"
-vtk = "<9.4.0 || >9.4.0,<9.4.1 || >9.4.1,<9.5.0"
+vtk = "<9.4.0 || >9.4.0,<9.4.1 || >9.4.1,<9.6.0"
 
 [package.extras]
 all = ["pyvista[colormaps,io,jupyter]"]
-colormaps = ["cmocean", "colorcet"]
+colormaps = ["cmcrameri", "cmocean", "colorcet"]
 io = ["imageio", "meshio (>=5.2)"]
 jupyter = ["ipywidgets", "jupyter-server-proxy", "nest_asyncio", "trame (>=2.5.2)", "trame-client (>=2.12.7)", "trame-server (>=2.11.7)", "trame-vtk (>=2.5.8)", "trame-vuetify (>=2.3.1)"]
 
@@ -4384,4 +4384,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13,<3.14"
-content-hash = "a251952d7909bad503f587869e423526063c7be8a03be2dbbffd7df8d7d74041"
+content-hash = "15030f612fcfc09a9ceb482f744779e56bdf42a6c3c4ad34acdc65dcc394bbf7"
