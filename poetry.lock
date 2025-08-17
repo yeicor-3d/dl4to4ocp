@@ -3049,14 +3049,14 @@ files = [
 
 [[package]]
 name = "pyvista"
-version = "0.46.0"
+version = "0.46.1"
 description = "Easier Pythonic interface to VTK"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "pyvista-0.46.0-py3-none-any.whl", hash = "sha256:32b7e3ebf4d70e89aead52d46a24abbbd1e48564cf524f2f91efe5fa302b3f0f"},
-    {file = "pyvista-0.46.0.tar.gz", hash = "sha256:521ea90b05e2339b3271983054924b9091350a7d5545fc88980dd2b79895dafc"},
+    {file = "pyvista-0.46.1-py3-none-any.whl", hash = "sha256:9c0aa4d06c6db1244f845a4968d06d0960ff9a2fffb44816e0192f3fceff0d5e"},
+    {file = "pyvista-0.46.1.tar.gz", hash = "sha256:19c13a6d3442fb30c52025a22ecc604b490166178f7f438a31d12fe4656bc583"},
 ]
 
 [package.dependencies]
@@ -3065,7 +3065,7 @@ numpy = ">=1.21.0"
 pillow = "*"
 pooch = "*"
 scooby = ">=0.5.1"
-typing-extensions = "*"
+typing-extensions = ">=4.10"
 vtk = "<9.4.0 || >9.4.0,<9.4.1 || >9.4.1,<9.6.0"
 
 [package.extras]
