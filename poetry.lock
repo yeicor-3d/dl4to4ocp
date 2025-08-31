@@ -3068,14 +3068,14 @@ files = [
 
 [[package]]
 name = "pyvista"
-version = "0.46.2"
+version = "0.46.3"
 description = "Easier Pythonic interface to VTK"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "pyvista-0.46.2-py3-none-any.whl", hash = "sha256:29e2724b056bef7b7c2e5bc1a15aa87cba2d84d3b738ac32cf3cffd6a6611287"},
-    {file = "pyvista-0.46.2.tar.gz", hash = "sha256:ff540eb8590d4a6c173c014251b56aabaa9bdbf2e3d4dafb1ad90caf6c677048"},
+    {file = "pyvista-0.46.3-py3-none-any.whl", hash = "sha256:ccb2a09019cad7976cfeeeb4f00fec2087127499ded795bada9a6a39d4bff30e"},
+    {file = "pyvista-0.46.3.tar.gz", hash = "sha256:1f8e6e39516d24d93bc227f278841a0d72ec3722959f612cf4616d2720a8afe1"},
 ]
 
 [package.dependencies]
