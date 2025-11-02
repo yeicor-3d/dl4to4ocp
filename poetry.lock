@@ -532,7 +532,7 @@ description = "Cross-platform colored terminal text."
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
 groups = ["main"]
-markers = "platform_system == \"Windows\" or sys_platform == \"win32\""
+markers = "sys_platform == \"win32\" or platform_system == \"Windows\""
 files = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
@@ -3226,14 +3226,14 @@ files = [
 
 [[package]]
 name = "pyvista"
-version = "0.46.3"
+version = "0.46.4"
 description = "Easier Pythonic interface to VTK"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "pyvista-0.46.3-py3-none-any.whl", hash = "sha256:ccb2a09019cad7976cfeeeb4f00fec2087127499ded795bada9a6a39d4bff30e"},
-    {file = "pyvista-0.46.3.tar.gz", hash = "sha256:1f8e6e39516d24d93bc227f278841a0d72ec3722959f612cf4616d2720a8afe1"},
+    {file = "pyvista-0.46.4-py3-none-any.whl", hash = "sha256:f113a8db2f49ae1b2f9eeb477c51a4038a4dfdd02ac097900aa49bf1d77f7b2e"},
+    {file = "pyvista-0.46.4.tar.gz", hash = "sha256:37ddd2783a45b552623df293e77ce93ed015244e8d89d1de179d2df594d7c571"},
 ]
 
 [package.dependencies]
