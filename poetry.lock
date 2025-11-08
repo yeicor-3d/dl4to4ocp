@@ -217,32 +217,35 @@ css = ["tinycss2 (>=1.1.0,<1.5)"]
 
 [[package]]
 name = "build123d"
-version = "0.9.1"
+version = "0.10.0"
 description = "A python CAD programming library"
 optional = false
 python-versions = "<3.14,>=3.10"
 groups = ["main"]
 files = [
-    {file = "build123d-0.9.1-py3-none-any.whl", hash = "sha256:0e2a3c171d7db55329201438a95ab888df6c1b0fd13067a3780efcc8fbe1cc78"},
-    {file = "build123d-0.9.1.tar.gz", hash = "sha256:8bc179cb65c7e7393191ad7113f13781fabf75892be07060f2bebf95369c093b"},
+    {file = "build123d-0.10.0-py3-none-any.whl", hash = "sha256:589f397b1dc7c85c9936aa7b2ee39946cc226a121e14a621b6749263aae5ed7d"},
+    {file = "build123d-0.10.0.tar.gz", hash = "sha256:73ded38ddca8ebb95e7dd078ac3d7aacc8ca42fce8f1d176f1040e35fba4f608"},
 ]
 
 [package.dependencies]
 anytree = ">=2.8.0,<3"
 cadquery-ocp = ">=7.8,<7.9"
 ezdxf = ">=1.1.0,<2"
-ipython = ">=8.0.0,<9"
+ipython = ">=8.0.0,<10"
+lib3mf = ">=2.4.1"
 numpy = ">=2,<3"
-ocpsvg = ">=0.4"
-py-lib3mf = ">=2.3.1"
+ocp_gordon = ">=0.1.17"
+ocpsvg = ">=0.5,<0.6"
+scipy = "*"
 svgpathtools = ">=1.5.1,<2"
+sympy = "*"
 trianglesolver = "*"
 typing_extensions = ">=4.6.0,<5"
+webcolors = ">=24.8.0,<24.9.0"
 
 [package.extras]
-all = ["build123d[benchmark]", "build123d[development]", "build123d[docs]", "build123d[ocp-vscode]"]
-benchmark = ["pytest-benchmark"]
-development = ["black", "mypy", "pylint", "pytest", "pytest-cov", "wheel"]
+all = ["build123d[development]", "build123d[docs]", "build123d[ocp-vscode]"]
+development = ["black", "mypy", "pylint", "pytest", "pytest-benchmark", "pytest-cov", "pytest-xdist", "wheel"]
 docs = ["sphinx (==8.1.3)", "sphinx-copybutton", "sphinx-design", "sphinx-hoverxref", "sphinx-rtd-theme", "sphinx_autodoc_typehints"]
 ocp-vscode = ["ocp_vscode"]
 stubs = ["cadquery-ocp-stubs (>=7.8,<7.9)"]
@@ -532,7 +535,7 @@ description = "Cross-platform colored terminal text."
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
 groups = ["main"]
-markers = "platform_system == \"Windows\" or sys_platform == \"win32\""
+markers = "sys_platform == \"win32\" or platform_system == \"Windows\""
 files = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
@@ -1800,6 +1803,19 @@ lint = ["pre-commit (==3.7.0)"]
 test = ["pytest (>=7.4)", "pytest-cov (>=4.1)"]
 
 [[package]]
+name = "lib3mf"
+version = "2.4.1"
+description = "lib3mf is an implementation of the 3D Manufacturing Format file standard"
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "lib3mf-2.4.1-py3-none-macosx_10_9_universal2.whl", hash = "sha256:f8e3f520130e7cb84086ef6945e72ed94ad3b44fc89bde54e5aa9f8226642093"},
+    {file = "lib3mf-2.4.1-py3-none-manylinux2014_x86_64.whl", hash = "sha256:549962487d4f3f5395a5098e2cad730c0582c55c43c08b24b43e7a6306483637"},
+    {file = "lib3mf-2.4.1-py3-none-win_amd64.whl", hash = "sha256:0f11b9baae2a667454fc68c5f6dcd6d76064d1059f6af1dc575c92f3a3ea21e5"},
+]
+
+[[package]]
 name = "logistro"
 version = "2.0.1"
 description = "Simple wrapper over logging for a couple basic features"
@@ -2522,6 +2538,27 @@ files = [
 ]
 
 [[package]]
+name = "ocp-gordon"
+version = "0.1.18"
+description = "A Python library for Gordon Surface interpolation using B-splines."
+optional = false
+python-versions = "<3.14,>=3.10"
+groups = ["main"]
+files = [
+    {file = "ocp_gordon-0.1.18-py3-none-any.whl", hash = "sha256:be85a54a682eb7d9377a345ee25b51a23dbabd74e85fc29dc02eee9e1b3c1f05"},
+    {file = "ocp_gordon-0.1.18.tar.gz", hash = "sha256:ea7f7414d31f910a79570f9218fe001cfac7dfa20b34799406a420c679dee6bb"},
+]
+
+[package.dependencies]
+cadquery-ocp = ">=7.8,<7.9"
+numpy = ">=2,<3"
+scipy = "*"
+
+[package.extras]
+stubs = ["cadquery-ocp-stubs (>=7.8,<7.9)"]
+test = ["pytest"]
+
+[[package]]
 name = "ocpsvg"
 version = "0.5.0"
 description = ""
@@ -3067,17 +3104,6 @@ files = [
 
 [package.extras]
 tests = ["pytest"]
-
-[[package]]
-name = "py-lib3mf"
-version = "2.3.1"
-description = "A python package for Lib3MF tools"
-optional = false
-python-versions = ">=3.9"
-groups = ["main"]
-files = [
-    {file = "py_lib3mf-2.3.1-py3-none-any.whl", hash = "sha256:86a870ef386debba9b74683d3a08125a34c153aaa65e967f61677cc5a0a65e24"},
-]
 
 [[package]]
 name = "pycparser"
@@ -4439,15 +4465,19 @@ files = [
 
 [[package]]
 name = "webcolors"
-version = "25.10.0"
+version = "24.8.0"
 description = "A library for working with the color formats defined by HTML and CSS."
 optional = false
-python-versions = ">=3.10"
+python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "webcolors-25.10.0-py3-none-any.whl", hash = "sha256:032c727334856fc0b968f63daa252a1ac93d33db2f5267756623c210e57a4f1d"},
-    {file = "webcolors-25.10.0.tar.gz", hash = "sha256:62abae86504f66d0f6364c2a8520de4a0c47b80c03fc3a5f1815fedbef7c19bf"},
+    {file = "webcolors-24.8.0-py3-none-any.whl", hash = "sha256:fc4c3b59358ada164552084a8ebee637c221e4059267d0f8325b3b560f6c7f0a"},
+    {file = "webcolors-24.8.0.tar.gz", hash = "sha256:08b07af286a01bcd30d583a7acadf629583d1f79bfef27dd2c2c5c263817277d"},
 ]
+
+[package.extras]
+docs = ["furo", "sphinx", "sphinx-copybutton", "sphinx-inline-tabs", "sphinx-notfound-page", "sphinxext-opengraph"]
+tests = ["coverage[toml]"]
 
 [[package]]
 name = "webencodings"
@@ -4493,4 +4523,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13,<3.14"
-content-hash = "eaa923c3d59fe863da1ffc1ee97d9b6bb36e9c007db6c9dcd4708b6a2eb4f7f0"
+content-hash = "edbc67a35136a63c844924b3026858d8233879c087d62fd7a34abc7edaa89a5d"
