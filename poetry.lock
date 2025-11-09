@@ -1636,18 +1636,18 @@ files = [
 
 [[package]]
 name = "kaleido"
-version = "1.1.0"
+version = "1.2.0"
 description = "Plotly graph export library"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "kaleido-1.1.0-py3-none-any.whl", hash = "sha256:839ed2357b89dd2f93c478960f41c401fe4038d404ae33e2fdbde028c18d7430"},
-    {file = "kaleido-1.1.0.tar.gz", hash = "sha256:5747703a56d4c034efa69abea4a9c2bfe8ef516ba848e0ec485c65b3b0ab52b6"},
+    {file = "kaleido-1.2.0-py3-none-any.whl", hash = "sha256:c27ed82b51df6b923d0e656feac221343a0dbcd2fb9bc7e6b1db97f61e9a1513"},
+    {file = "kaleido-1.2.0.tar.gz", hash = "sha256:fa621a14423e8effa2895a2526be00af0cf21655be1b74b7e382c171d12e71ef"},
 ]
 
 [package.dependencies]
-choreographer = ">=1.0.10"
+choreographer = ">=1.1.1"
 logistro = ">=1.0.8"
 orjson = ">=3.10.15"
 packaging = "*"
@@ -4523,4 +4523,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13,<3.14"
-content-hash = "edbc67a35136a63c844924b3026858d8233879c087d62fd7a34abc7edaa89a5d"
+content-hash = "9b004842a02e2e17b3f9f643bcf4007cc082e6e8c0743660047657ef372df0bf"
