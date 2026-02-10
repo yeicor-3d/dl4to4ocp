@@ -17,13 +17,12 @@ jobs:
       - uses: "actions/setup-python@v6"
         with:
           python-version: "3.13"
-          cache: "pip"
+          cache: "poetry"
 
       # Install the dependencies
-      - run: "pip install setuptools"
-      - run: "pip install ."
+      - run: "poetry install"
 
       # Run all the tests
-      - run: "python -m dl4to4ocp.resize"
-      - run: "python -m dl4to4ocp.voxels"
-      - run: "python -m example.example"
+      - run: "poetry run python -m dl4to4ocp.resize"
+      - run: "poetry run python -m dl4to4ocp.voxels"
+      - run: "poetry run python -m example.example"
