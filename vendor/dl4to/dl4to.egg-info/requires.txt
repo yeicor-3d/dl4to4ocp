@@ -1,0 +1,14 @@
+torch
+numpy
+scipy
+plotly
+matplotlib
+hypothesis
+pandas
+tqdm
+natsort
+scikit-image
+kaleido
+requests
+pyvista
+vtk
