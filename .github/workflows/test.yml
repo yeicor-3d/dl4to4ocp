@@ -16,13 +16,13 @@ jobs:
       - run: "pipx install poetry"
       - uses: "actions/setup-python@v6"
         with:
-          python-version: "3.13"
-          cache: "pip"
+          python-version: "3.12"
+          cache: "poetry"
 
       # Install the dependencies
-      - run: "pip install ."
+      - run: "poetry install --no-interaction --no-ansi"
 
       # Run all the tests
-      - run: "python -m dl4to4ocp.resize"
-      - run: "python -m dl4to4ocp.voxels"
-      - run: "python -m example.example"
+      - run: "poetry run python -m dl4to4ocp.resize"
+      - run: "poetry run python -m dl4to4ocp.voxels"
+      - run: "poetry run python -m example.example"

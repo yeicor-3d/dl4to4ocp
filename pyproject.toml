@@ -6,9 +6,9 @@ authors = ["Yeicor <4929005+Yeicor@users.noreply.github.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.13,<3.14"
+python = ">=3.12,<3.14"
 
-dl4to = {git = "https://github.com/dl4to/dl4to"} # The library that we are wrapping
+dl4to = {path = "vendor/dl4to", develop = true} # The library that we are wrapping
 pyvista = "^0.46.0" # dl4to dep: fixed version as latest is incompatible
 kaleido = "1.2.0" # dl4to dep: fixed version as latest is broken
 pyglet = "^1.5.28" # dl4to dep: fixed version as latest is incompatible
