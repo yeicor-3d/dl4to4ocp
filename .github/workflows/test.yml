@@ -20,7 +20,7 @@ jobs:
           cache: "poetry"
 
       # Install the dependencies
-      - run: "poetry install"
+      - run: "poetry install --no-interaction --no-ansi"
 
       # Run all the tests
       - run: "poetry run python -m dl4to4ocp.resize"
