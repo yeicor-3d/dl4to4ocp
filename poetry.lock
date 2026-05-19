@@ -3391,14 +3391,14 @@ dev = ["black", "build", "freezegun", "mdx_truly_sane_lists", "mike", "mkdocs", 
 
 [[package]]
 name = "pyvista"
-version = "0.48.2"
+version = "0.48.4"
 description = "3D visualization and mesh analysis for science and engineering."
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "pyvista-0.48.2-py3-none-any.whl", hash = "sha256:79a9205368a8ab2664463af523c27d37beb0c5fd522d009e788c11d5810737c6"},
-    {file = "pyvista-0.48.2.tar.gz", hash = "sha256:0b115b107f03e8e57bfb5d9dd2a40591f4e641b6a87dc8beb5d0c2099a225e2e"},
+    {file = "pyvista-0.48.4-py3-none-any.whl", hash = "sha256:a46eda178e10e279afda550c341676a82dcee607c86db74565fa455ac0bd23e2"},
+    {file = "pyvista-0.48.4.tar.gz", hash = "sha256:c639dad1bddff5e366d77371f66f783f6e6a0581446810a66439902222d8db07"},
 ]
 
 [package.dependencies]
