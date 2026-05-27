@@ -792,14 +792,14 @@ tests = ["pytest", "pytest-cov", "pytest-xdist"]
 
 [[package]]
 name = "cyclopts"
-version = "4.15.0"
+version = "4.16.1"
 description = "Intuitive, easy CLIs based on type hints."
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "cyclopts-4.15.0-py3-none-any.whl", hash = "sha256:0eb784abb4ea8893099429e903193ff31edcb5fe17a619fa93c6eaf60bf51f1f"},
-    {file = "cyclopts-4.15.0.tar.gz", hash = "sha256:3b5655581bcb759880abf1aeebf6fd370a3a4da8cf1248dd71061e357a525a34"},
+    {file = "cyclopts-4.16.1-py3-none-any.whl", hash = "sha256:617795392c4113a2c2cc7af716f20244900e87f23daa05442d1268d81472a592"},
+    {file = "cyclopts-4.16.1.tar.gz", hash = "sha256:8aa47bf92a5fb33abca5af05e576eecdb0d2f79893ad29238046df78370fc4a8"},
 ]
 
 [package.dependencies]
@@ -1212,14 +1212,14 @@ zstd = ["zstandard (>=0.18.0)"]
 
 [[package]]
 name = "hypothesis"
-version = "6.152.9"
+version = "6.152.11"
 description = "The property-based testing library for Python"
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "hypothesis-6.152.9-py3-none-any.whl", hash = "sha256:9c4fdccb1eac0b12ec740c12290d0e6a0bea3526a3f0bf812b7643bb563c2d8b"},
-    {file = "hypothesis-6.152.9.tar.gz", hash = "sha256:de4711d69ce3a18009047c3b44882810fd0c0348c1558e920a4b0d2c45f59e1e"},
+    {file = "hypothesis-6.152.11-py3-none-any.whl", hash = "sha256:deffc64bf3c178ca8225ce56926c345e43aacbc3d8b8d6df6f766c514f48e81f"},
+    {file = "hypothesis-6.152.11.tar.gz", hash = "sha256:13167fb2fd61710ff9e9ad3fd6ac02bc683c9999a4166c9877b0b0422a908134"},
 ]
 
 [package.dependencies]
