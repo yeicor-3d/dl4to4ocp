@@ -792,14 +792,14 @@ tests = ["pytest", "pytest-cov", "pytest-xdist"]
 
 [[package]]
 name = "cyclopts"
-version = "4.17.0"
+version = "4.18.0"
 description = "Intuitive, easy CLIs based on type hints."
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "cyclopts-4.17.0-py3-none-any.whl", hash = "sha256:6ee947c9f3bbe9679b9fa9cea1bb327298db80b302df62d7f1d1bd82726508e0"},
-    {file = "cyclopts-4.17.0.tar.gz", hash = "sha256:6b3231f18b404879e978214ef26fa174e8b505bd0f2117290b4135560666004b"},
+    {file = "cyclopts-4.18.0-py3-none-any.whl", hash = "sha256:18ba2912e48e890a97ecc8a05c9beddf30a407b43f4e14cccfd40efddc41f029"},
+    {file = "cyclopts-4.18.0.tar.gz", hash = "sha256:fb7b730f21932e0784f7e54462df0447aaa1fbf034d65b605bd8a25dce58b188"},
 ]
 
 [package.dependencies]
@@ -1016,14 +1016,14 @@ devel = ["colorama", "json-spec", "jsonschema", "pylint", "pytest", "pytest-benc
 
 [[package]]
 name = "filelock"
-version = "3.29.1"
+version = "3.29.3"
 description = "A platform independent file lock."
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "filelock-3.29.1-py3-none-any.whl", hash = "sha256:85199dfd706869641b72b2e8955d5416a4b2b7dc4b0e8e6d97b4cc1299a6983b"},
-    {file = "filelock-3.29.1.tar.gz", hash = "sha256:d97e6b1b9757569626c58caa07dc4beb1613f4a2938b1e8cc81afca398906c9e"},
+    {file = "filelock-3.29.3-py3-none-any.whl", hash = "sha256:e58333029cc9b925f39aad59b1d8f0a1ad836af4e60d7217f4a4dba87461261d"},
+    {file = "filelock-3.29.3.tar.gz", hash = "sha256:7fc1b3f39cf172fd8203812043c57b8a65aef9969f38b6704f628b881f761a84"},
 ]
 
 [[package]]
@@ -3411,27 +3411,28 @@ jupyter = ["ipywidgets", "jupyter-server-proxy", "nest-asyncio2", "trame (>=2.5.
 
 [[package]]
 name = "pywinpty"
-version = "3.0.4"
+version = "3.0.5"
 description = "Pseudo terminal support for Windows from Python."
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 markers = "os_name == \"nt\""
 files = [
-    {file = "pywinpty-3.0.4-cp310-cp310-win_amd64.whl", hash = "sha256:aa231b3e63bf8b97170d0889225c1805390d3839675c6a9398bdc26a4603ee3b"},
-    {file = "pywinpty-3.0.4-cp310-cp310-win_arm64.whl", hash = "sha256:368323d836edf6b3f81c7b2dab8493d0d6df3796080963bf03109a0e2f6afeb9"},
-    {file = "pywinpty-3.0.4-cp311-cp311-win_amd64.whl", hash = "sha256:7648ef6c572896859efcba546026ceed6c6790deb7891246cbacc3d31e1eed56"},
-    {file = "pywinpty-3.0.4-cp311-cp311-win_arm64.whl", hash = "sha256:27af19cb9f633ae04bf4062fc8e89042d4d60ea99678e8b44ea1f412ac2b4a77"},
-    {file = "pywinpty-3.0.4-cp312-cp312-win_amd64.whl", hash = "sha256:3c8af7d7f37e7d2a2bcfd5625fbd6158b49fef620b6d10682d081f63b47c6aab"},
-    {file = "pywinpty-3.0.4-cp312-cp312-win_arm64.whl", hash = "sha256:8b26b58eff31fea6018afe6e1eba47382ccee1e879376b09a591ff3259d5a4e3"},
-    {file = "pywinpty-3.0.4-cp313-cp313-win_amd64.whl", hash = "sha256:b63b22ab53fea5ae3f10a55180efb8d089be82632256d9a783c1f6dbfc3faf29"},
-    {file = "pywinpty-3.0.4-cp313-cp313-win_arm64.whl", hash = "sha256:f8fae0cdbf3d7c9a3e72490d2460dedc4c050fd1eff5d3b715097bea89cb9239"},
-    {file = "pywinpty-3.0.4-cp313-cp313t-win_amd64.whl", hash = "sha256:397e12405c5c8749bac56bb447453d6200a515cf8ef3802e1a83dd3fb2e7384a"},
-    {file = "pywinpty-3.0.4-cp313-cp313t-win_arm64.whl", hash = "sha256:1ab08db89053c0f31405c842c129c8f1a2610b463861ac22202c763cdbb16d75"},
-    {file = "pywinpty-3.0.4-cp314-cp314-win_amd64.whl", hash = "sha256:b028b4d8ece77a4b35282461234d2e38c472c6dc4be6e5cccdeffcd2776ebf7f"},
-    {file = "pywinpty-3.0.4-cp314-cp314-win_arm64.whl", hash = "sha256:171b60831057b519bc3673970eb970352b99e6efdfd22cad169b7a815699d862"},
-    {file = "pywinpty-3.0.4-cp314-cp314t-win_amd64.whl", hash = "sha256:3771c364b38a5e4956582ee68d912e35763d78310e362ddce6d390cf5ff94f58"},
-    {file = "pywinpty-3.0.4-cp314-cp314t-win_arm64.whl", hash = "sha256:819eb417254eac67553c93d2f38b12617bb0ebb65e6b840d51fe7e5a4a824646"},
+    {file = "pywinpty-3.0.5-cp310-cp310-win_amd64.whl", hash = "sha256:b467dcad72365bc2205ed8b6e694e817d71de269d46e56cfe267dfa9d3d30e1b"},
+    {file = "pywinpty-3.0.5-cp310-cp310-win_arm64.whl", hash = "sha256:7dc4046ea8e4d7f0a16dae8dfcaeeda6df7ca3a9330444d2ba5bb96138fe0a91"},
+    {file = "pywinpty-3.0.5-cp311-cp311-win_amd64.whl", hash = "sha256:af7a8720c78776ddd6259b71dd567944f766a6cd67f8d2887fbc4973967bacda"},
+    {file = "pywinpty-3.0.5-cp311-cp311-win_arm64.whl", hash = "sha256:c2406f54f699eab75953fb75ce805f2ae55a33a957cd070890abd454fb4b7680"},
+    {file = "pywinpty-3.0.5-cp312-cp312-win_amd64.whl", hash = "sha256:d62946adf14b15b54c0b8d785f93fe18b04da23f4ad59e2e8c4612646e9abd23"},
+    {file = "pywinpty-3.0.5-cp312-cp312-win_arm64.whl", hash = "sha256:e9391c05fbfa7a992a97e831fc6849887b4014a614192e3d984a7ca59592b376"},
+    {file = "pywinpty-3.0.5-cp313-cp313-win_amd64.whl", hash = "sha256:48db1b0ad9d0a1b81dcaaa7163a99a7808deaceb0c1b2344716dc1fc090c3c4c"},
+    {file = "pywinpty-3.0.5-cp313-cp313-win_arm64.whl", hash = "sha256:2c6008fb2d3774b48693b2fcb7f2cc317ade9dc581289a964ffeeaf81307c9b5"},
+    {file = "pywinpty-3.0.5-cp313-cp313t-win_amd64.whl", hash = "sha256:22ce1b780d89821cc52daf6eac0708af22d93d000ce9c7c07e37489db8594598"},
+    {file = "pywinpty-3.0.5-cp313-cp313t-win_arm64.whl", hash = "sha256:9c2919a81bc5cfb09b86fc5a002112b2de95ca4304a07413cbeeb746a1307a5c"},
+    {file = "pywinpty-3.0.5-cp314-cp314-win_amd64.whl", hash = "sha256:03bb3c16d691d9242267201830bcd0e64a9b663170e9042bc84b210da9de15ac"},
+    {file = "pywinpty-3.0.5-cp314-cp314-win_arm64.whl", hash = "sha256:89c5c6ef08997a3b4b277b214a35fe15cab4dd6d119f0140aa71df5b1168fdbc"},
+    {file = "pywinpty-3.0.5-cp314-cp314t-win_amd64.whl", hash = "sha256:7b566165e0c5fdd6abe167a5ac8b954be6a843eb55a85946576d6bc1dea03d6d"},
+    {file = "pywinpty-3.0.5-cp314-cp314t-win_arm64.whl", hash = "sha256:24366280a8aa677323da87bec729cb3ea3b35367386cece0978bdc6e4695c690"},
+    {file = "pywinpty-3.0.5.tar.gz", hash = "sha256:61db0db063de9865adbea66db294628f8577f608d9764a4c7d3384eeacc4e81b"},
 ]
 
 [[package]]
