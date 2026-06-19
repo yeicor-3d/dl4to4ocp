@@ -17,6 +17,41 @@ from dl4to4ocp.mlogging import log_timing, mlogger
 T = TypeVar("T")
 
 
+def _make_solid_from_faces(vertices: np.ndarray, faces: np.ndarray) -> TopoDS_Compound:
+    """Convert triangle mesh vertices/faces to an OpenCascade compound.
+
+    Handles sewing disjoint face groups into shells, building solids, and
+    assembling them into a compound.  Degenerate triangles are silently
+    skipped.  This function is an internal implementation detail.
+    """
+    all_faces: list[Face] = []
+    for face in faces:
+        v0, v1, v2 = vertices[face[0]], vertices[face[1]], vertices[face[2]]
+        if np.linalg.norm(np.cross(v1 - v0, v2 - v0)) < 1e-6:
+            continue
+        all_faces.append(Face(Wire([
+            Edge.make_line(v0, v1),
+            Edge.make_line(v1, v2),
+            Edge.make_line(v2, v0),
+        ])))
+
+    if not all_faces:
+        raise ValueError("No non-degenerate faces produced")
+
+    # Sew faces into contiguous groups, then build shells and solids
+    sewed = Face.sew_faces(all_faces)
+    solids: list[Solid] = []
+    for group in sewed:
+        try:
+            solids.append(Solid(Shell(list(group.faces()))))
+        except Exception:
+            continue
+
+    if solids:
+        return Compound(solids).wrapped
+    return Compound(all_faces).wrapped
+
+
 @dataclass
 class Voxels(Generic[T]):
     """A 3D voxels-like object, that can hold data of any length."""
@@ -164,31 +199,8 @@ class VoxelsSDF(Voxels[np.float32]):
         vertices, faces = self.to_trimesh(pad, threshold, impl)
         mlogger.info("Vertices: %s, Faces: %s", vertices.shape, faces.shape)
 
-        with log_timing("to_ocp > making OCP faces"):
-            # Convert the vertices and faces to CAD faces
-            all_faces = []
-            for face in faces:
-                v0 = vertices[face[0]]
-                v1 = vertices[face[1]]
-                v2 = vertices[face[2]]
-
-                # Ignore degenerate faces
-                if np.linalg.norm(np.cross(v1 - v0, v2 - v0)) < 1e-6:
-                    continue
-
-                edge1 = Edge.make_line(v0, v1)
-                edge2 = Edge.make_line(v1, v2)
-                edge3 = Edge.make_line(v2, v0)
-                f = Face(Wire([edge1, edge2, edge3]))
-                f.wrapped.Reverse()
-                all_faces.append(f)
-
         with log_timing("to_ocp > make compound from faces"):
-            # WARNING: Shell(all_faces) sometimes swaps face orientation??
-            # return Compound(all_faces).wrapped
-            shells = Shell(all_faces).shells()
-            solids = [Solid(s) for s in shells]
-            return Compound(solids).wrapped
+            return _make_solid_from_faces(vertices, faces)
 
     def plot(self, dist_from: float = 0.0, dist_to: float = None, display: bool = True) -> Tuple[object, object]:
         """Plots the SDF voxels as a 3D image."""
