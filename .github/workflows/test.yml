@@ -13,16 +13,15 @@ jobs:
     steps:
       # Basic setup
       - uses: "actions/checkout@v6"
-      - run: "pipx install poetry"
+      - uses: "astral-sh/setup-uv@v6"
       - uses: "actions/setup-python@v6"
         with:
           python-version: "3.12"
-          cache: "poetry"
 
       # Install the dependencies
-      - run: "poetry install --no-interaction --no-ansi"
+      - run: "uv sync --frozen"
 
       # Run all the tests
-      - run: "poetry run python -m dl4to4ocp.resize"
-      - run: "poetry run python -m dl4to4ocp.voxels"
-      - run: "poetry run python -m example.example"
+      - run: "uv run python -m dl4to4ocp.resize"
+      - run: "uv run python -m dl4to4ocp.voxels"
+      - run: "uv run python -m example.example"

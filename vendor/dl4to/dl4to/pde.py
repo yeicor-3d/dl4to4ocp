@@ -13,7 +13,10 @@ from scipy.sparse.linalg import factorized, use_solver, spsolve
 from scipy.sparse import csc_matrix
 from typing import Callable
 
-use_solver(assumeSortedIndices=True)
+try:
+    use_solver(assumeSortedIndices=True)
+except AttributeError:
+    pass
 
 # Cell
 class AutogradLinearSolver(torch.autograd.Function):
