@@ -2192,15 +2192,15 @@ wheels = [
 
 [[package]]
 name = "rich-rst"
-version = "2.0.3"
+version = "2.1.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pygments" },
     { name = "rich" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/6c/2b/d2f53dedfb4ec4d88a87e5941c9616a3d4261d36d113f86959c27f9c9619/rich_rst-2.0.3.tar.gz", hash = "sha256:ffc7d779e594ae5bce1256e1bb95f3b89bf36c6c3566671133ace0603261e76f", size = 301579, upload-time = "2026-07-04T17:17:11.451Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e2/d6/d0b9fafc73b65767200da027acab1db1bdb1048f4fea5ebf659df01c700e/rich_rst-2.1.0.tar.gz", hash = "sha256:f4d117b49697f338769759fa5cacf5197da4888b347b9fda2e50aef5cd8d93bd", size = 302732, upload-time = "2026-07-05T02:59:44.308Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/38/2d/99433ba6e0adbb8a84e90adf0382650c7904e6eec4bafdc55ac691827e7f/rich_rst-2.0.3-py3-none-any.whl", hash = "sha256:8de7f59fc9ea38ed01c1be98fc07274a3af282666f7ecf812d05269aec08cda6", size = 273081, upload-time = "2026-07-04T17:17:07.667Z" },
+    { url = "https://files.pythonhosted.org/packages/2a/68/1fc93dd759605b5d00fc98b50200739e41ed32bd22d6ba35ca6c3932371b/rich_rst-2.1.0-py3-none-any.whl", hash = "sha256:7ecd1343ee12c879d0e7ae74c3eb6d263b023d2929c6d114212eb1fd91057255", size = 272987, upload-time = "2026-07-05T02:59:42.792Z" },
 ]
 
 [[package]]
