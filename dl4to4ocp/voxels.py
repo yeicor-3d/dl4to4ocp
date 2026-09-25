@@ -85,7 +85,7 @@ class Voxels(Generic[T]):
     @property
     def spacing(self) -> np.array:
         """The spacing between each voxel in the X, Y and Z directions. This is the same as the voxel size."""
-        return np.array((self.max - self.min).to_tuple()) / self.num_voxels
+        return np.array(tuple(self.max - self.min)) / self.num_voxels
 
 
 @dataclass
@@ -104,14 +104,14 @@ class VoxelsSDF(Voxels[np.float32]):
             bounding_box = solid_bd.bounding_box(None)
 
             # Get the proper SDF resolution for (almost) cubic voxels
-            voxels_multiplier = np.array(bounding_box.size.to_tuple()) / np.max(bounding_box.size.to_tuple())
+            voxels_multiplier = np.array(tuple(bounding_box.size)) / np.max(tuple(bounding_box.size))
 
             # Ensure the border is fully outside the solid by 1 voxel on each edge
             # NOTE: This avoids squished corners when rebuilding the solid with dual contouring
             bounding_box.min -= Vector(
-                np.array(bounding_box.size.to_tuple()) * pad_voxels / max_voxels * voxels_multiplier)
+                np.array(tuple(bounding_box.size)) * pad_voxels / max_voxels * voxels_multiplier)
             bounding_box.max += Vector(
-                np.array(bounding_box.size.to_tuple()) * pad_voxels / max_voxels * voxels_multiplier)
+                np.array(tuple(bounding_box.size)) * pad_voxels / max_voxels * voxels_multiplier)
 
             # Compute the number of samples (voxels + 1) in each direction
             num_voxels = max_voxels * voxels_multiplier
@@ -126,8 +126,8 @@ class VoxelsSDF(Voxels[np.float32]):
             faces_np = np.array([[f for f in fs] for fs in faces], dtype=np.uint32)
 
         with log_timing("from_ocp > SDF sampling"):
-            bb_min = bounding_box.min.to_tuple()
-            bb_max = bounding_box.max.to_tuple()
+            bb_min = tuple(bounding_box.min)
+            bb_max = tuple(bounding_box.max)
             x = np.linspace(bb_min[0], bb_max[0], num_samples[0])
             y = np.linspace(bb_min[1], bb_max[1], num_samples[1])
             z = np.linspace(bb_min[2], bb_max[2], num_samples[2])
@@ -178,7 +178,7 @@ class VoxelsSDF(Voxels[np.float32]):
 
     def _to_trimesh_dc(self, threshold: float) -> tuple[np.ndarray, np.ndarray]:
         # noinspection PyTypeChecker
-        grid = sdftoolbox.grid.Grid(tuple(self.num_samples.tolist()), self.min.to_tuple(), self.max.to_tuple())
+        grid = sdftoolbox.grid.Grid(tuple(self.num_samples.tolist()), tuple(self.min), tuple(self.max))
         scene = sdftoolbox.sdfs.Discretized(grid, self.samples - threshold)
         vertices, faces = sdftoolbox.dual_isosurface(
             scene, grid, triangulate=True,
@@ -191,7 +191,7 @@ class VoxelsSDF(Voxels[np.float32]):
         vertices, faces, _, _ = marching_cubes(self.samples, level=threshold, spacing=self.spacing,
                                                allow_degenerate=False)
         # Displace the vertices to the correct position
-        vertices += self.min.to_tuple()
+        vertices += tuple(self.min)
         return vertices, faces
 
     def to_ocp(self, pad: bool = False, threshold: float = 0, impl: Literal['mc', 'dc'] = 'dc') -> TopoDS_Compound:
@@ -259,7 +259,7 @@ class VoxelsForce(Voxels[np.float32]):
             solid, max_voxels, tessellate_tolerance, tessellate_angular_tolerance, pad_voxels)
         new_voxels = np.zeros(voxels_sdf.samples.shape + (3,), dtype=np.float32)
         for i in range(3):
-            new_voxels[..., i] = voxels_sdf.samples.clip(0, np.inf) * force.to_tuple()[i]
+            new_voxels[..., i] = voxels_sdf.samples.clip(0, np.inf) * tuple(force)[i]
         return VoxelsForce(new_voxels, voxels_sdf.min, voxels_sdf.max)
 
     @staticmethod
@@ -277,6 +277,7 @@ if __name__ == '__main__':
     # test_obj = Box(1, 1, 1)
     test_obj = Location((0, 0, 0), (45, 0, 0)) * (Box(1, 1, 1) - Sphere(0.55))
     export_dir = os.path.join(os.path.dirname(__file__), '..', 'example', 'export')
+    os.makedirs(export_dir, exist_ok=True)
     export_stl(test_obj, os.path.join(export_dir, "voxels_test.stl"))
 
     # NOTE: Padding is useful for rebuilding instantly, but not for dl4to
