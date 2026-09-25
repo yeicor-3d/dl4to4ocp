@@ -81,7 +81,7 @@ class ProblemSetup(object):
             bc_v_t = from_numpy(bc_v_samples)
             p_v_t = from_numpy(p_v_samples)
             fs_v_t = from_numpy(fs_v_samples)
-            voxel_size = Vector(p_v.spacing).to_tuple()
+            voxel_size = tuple(Vector(p_v.spacing))
 
         bb = Shape(ds).bounding_box()
         return voxel_size, bc_v_t, p_v_t, fs_v_t, bb.min, bb.max
